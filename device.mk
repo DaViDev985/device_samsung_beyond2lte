@@ -23,6 +23,11 @@ $(call inherit-product, vendor/samsung/beyond2lte/beyond2lte-vendor.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# DerpFest Flags
+DERPFEST_BUILD_TYPE := Official
+DERP_VERSION_APPEND_TIME_OF_DAY=true
+TARGET_NOT_USES_BLUR=true
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
